@@ -1,7 +1,7 @@
 <?php
 function connect()
 {
-  $svr_name = "31.220.85.53";
+  $svr_name = "localhost";
   $unam = "dev";
   #wattafeak
   $pasw = "dev";
