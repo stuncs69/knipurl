@@ -1,0 +1,1 @@
+This is a shitty, made-for-fun URL shortener. Zero attention to UI, zero attention to code cleanliness. This is a bad example of my skills. For a better example check out the rest of my repositories :)
