@@ -35,6 +35,6 @@ fwrite($file, $data);
 fclose($file);
 
 header("Content-Type: application/json;");
-echo json_encode(["shortUrl"=>"https://knipurl.nl/$code", "shortAnal"=>"https://knipurl.nl/a/$code"]);
+echo json_encode(["shortUrl"=>"https://knipurl.nl/url/?s=$code", "shortAnal"=>"https://knipurl.nl/a/?s=$code"]);
 return;
 ?>

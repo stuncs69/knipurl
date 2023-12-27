@@ -9,15 +9,22 @@ else {
   $data = fread($fPtr, filesize($file_loc));
   $data_parsed = json_decode($data, true);
   $new_loc = $data_parsed["long_url"];
+
+  if (strlen($data_parsed["long_url"]) > 0) $read = 0;
+  else $read = -1;
+
   Header("Location: https://$new_loc");
   fclose($fPtr);
 
-  $fPtr = fopen($file_loc, "w");
-  $views = intval($data_parsed["views"]);
-  $views++;
+  if ($read == 0)
+  {
+    $fPtr = fopen($file_loc, "w");
+    $views = intval($data_parsed["views"]);
+    $views++;
 
-  $data_parsed["views"] = $views;
-  fwrite($fPtr, json_encode($data_parsed));
-  fclose($fPtr);
+    $data_parsed["views"] = $views;
+    fwrite($fPtr, json_encode($data_parsed));
+    fclose($fPtr);
+  }
 }
 ?>
