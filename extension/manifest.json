@@ -1,0 +1,14 @@
+{
+	"manifest_version": 3,
+	"name": "KnipUrl BETA",
+	"version": "0.0.1",
+	"description": "Allows user to copy a short url by clicking the Extension icon",
+	"author": "KuByX",
+	"action": {
+		"default_title": "Knipurl"
+	},
+	"permissions": ["activeTab", "scripting"],
+	"background": {
+		"service_worker": "w.js"
+	}
+}

@@ -10,7 +10,7 @@ $http = curl_getinfo($curl_handle, CURLINFO_HTTP_CODE);
 
 $r_body = array("httpc"=>$http, "success"=>NULL);
 
-if ($http >= 200 && $http < 400 && $http != 0)
+if ($http > 0)
   $r_body["success"] = 0;
 else
   $r_body["success"] = -1;

@@ -4,23 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 Site doesn't exist</title>
+  <script src="../js/timer.js" defer></script>
 </head>
 <body>
   <p>The requested url does not exist</p>
   <p>Redirecting you in <span id="seconds">5</span></p>
-  <script>
-    let seconds = 5;
-
-    const secondsSpan = document.querySelector("span#seconds");
-    const counter = setInterval(() => {
-      if (seconds > 0) {
-        seconds--;
-        secondsSpan.textContent = seconds.toString();
-      } else {
-        clearInterval(counter);
-        location.replace("../");
-      }
-    }, 1000);
-  </script>
 </body>
 </html>
